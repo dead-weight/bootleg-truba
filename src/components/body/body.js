@@ -1,6 +1,17 @@
 import React from 'react'
+
+//material ui
 import Grid from '@material-ui/core/Grid';
 import { Button } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField'; 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
+const message ={
+    msg: [
+        {from: 'name', text: 'text', time: 'time'} 
+    ]
+}
 
 
 export const Body = () =>{
@@ -56,57 +67,94 @@ return (
                                 </Grid>
                             </div>
                         </div>
-                        <div style={{width: '100%',
-                        display: 'flex',
-                        alignItems: 'center'
-                        }}>
-                            <Grid item xs={9}>
-                                <div 
-                                className='creatorInfo' 
-                                style={{display: 'flex',
-                                justifyContent: 'flex-start',
-                                alignItems: 'center'
-                                }}>
-                                    <img src='https://i.imgur.com/leErxJR.png'></img>
-                                    <div style={{display: 'flex', flexDirection: 'column'}}>
-                                        <div style={{backgroundColor:'cornsilk'}}>
-                                        булжадь
-                                        </div>
-                                        <div style={{backgroundColor: 'khaki'}}>
-                                        цифры 
+                        <div style={{display: 'flex', flexDirection: 'column'}}>
+                            <div style={{width: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            }}>
+                                <Grid item xs={9}>
+                                    <div 
+                                    className='creatorInfo' 
+                                    style={{display: 'flex',
+                                    justifyContent: 'flex-start',
+                                    alignItems: 'center'
+                                    }}>
+                                        <img src='https://i.imgur.com/leErxJR.png'></img>
+                                        <div style={{display: 'flex', flexDirection: 'column'}}>
+                                            <div style={{backgroundColor:'cornsilk'}}>
+                                            булжадь
+                                            </div>
+                                            <div style={{backgroundColor: 'khaki'}}>
+                                            цифры 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Grid>
-                            <Grid item xs={3}>
-                            <div 
-                            className='creatorButtons' 
-                            style={{display: 'flex',
-                            justifyContent: 'flex-end',
-                            alignItems: 'center'
-                            }}>
-                                
-                                    <Button>
-                                        S
-                                    </Button>
-                                
-                                    <Button>
-                                        B
-                                    </Button>
+                                </Grid>
+                                <Grid item xs={3}>
+                                <div>
+                                    <div 
+                                    className='creatorButtons' 
+                                    style={{display: 'flex',
+                                    justifyContent: 'flex-end',
+                                    alignItems: 'center'
+                                    }}>
+                                        
+                                            <Button style={{backgroundColor:'lavender'}}>
+                                                S
+                                            </Button>
+                                        
+                                            <Button style={{backgroundColor:'lavenderblush'}}>
+                                                B
+                                            </Button>
+                                        
+                                    </div>
+                                    </div>
+                                </Grid>
                                 
                             </div>
-                            </Grid>
-                        </div>
+                            <div style={{maxWidth: '100%'}}>
+                                DESCTIPTION
+                                <h4 style={{overflowWrap: 'break-word'}}>Pepegapepepgoegsgisfgp[sdfbhopsdfgnjswproejigsdfpoigvbkhnrtgpiojsdfbnrtjgin[asdinbhpotihgzikjvsoitnmboisnfj</h4>
+                            </div>
                         
+                        </div>
                     </div>
+                    <div className='commentsSection' style={{display: 'flex',
+                                    justifyContent: 'flex-start',
+                                    backgroundColor:'orange',
+                                    flexDirection: 'column',
+                                    }}>
+                        <div style={{display: 'flex',flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center'}}> 
+                            <div>1337 comments</div>
+                            <Button style={{backgroundColor: 'orangered'}}> Options</Button>
+                        </div>
 
-                    <div className='commentsSection'>
+                        <div style={{display: 'flex',flexDirection: 'row'}}>              
+                            <img src='https://i.imgur.com/a87Xop7.png'></img>
+                            <TextField id="standard-basic" label="Standard" fullWidth='true'/>
+                        </div> 
 
+                        <div>
+                            <List>
+                            <ListItem>text</ListItem>      
+                            </List>
+                        </div> 
                     </div>
             </Grid>
+
             <Grid item xs={3} style={{height: '100vh', backgroundColor: 'blue'}}>
                     <div className ='chatBox'>
-
+                        <List>
+                            <ListItem>
+                                pepe 
+                            </ListItem>
+                            <ListItem>
+                                pepe 
+                            </ListItem>
+                            <ListItem>
+                                pepe 
+                            </ListItem>
+                        </List>
                     </div>
             </Grid>
         </div>
